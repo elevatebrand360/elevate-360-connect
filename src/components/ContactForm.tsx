@@ -71,7 +71,7 @@ const ContactForm = () => {
                     <Phone className="h-5 w-5 text-brand-orange mt-0.5" />
                     <div>
                       <p className="font-medium text-brand-navy">Phone</p>
-                      <p className="text-gray-600">(555) 123-4567</p>
+                      <p className="text-gray-600">+91 9163138456</p>
                     </div>
                   </div>
                   
@@ -79,7 +79,7 @@ const ContactForm = () => {
                     <Mail className="h-5 w-5 text-brand-orange mt-0.5" />
                     <div>
                       <p className="font-medium text-brand-navy">Email</p>
-                      <p className="text-gray-600">hello@elevatebrand360.com</p>
+                      <p className="text-gray-600">elevatebrand360@gmail.com</p>
                     </div>
                   </div>
                   
@@ -87,7 +87,7 @@ const ContactForm = () => {
                     <MapPin className="h-5 w-5 text-brand-orange mt-0.5" />
                     <div>
                       <p className="font-medium text-brand-navy">Office</p>
-                      <p className="text-gray-600">123 Marketing Street, Digital City, 10001</p>
+                      <p className="text-gray-600">Howrah, West Bengal, India</p>
                     </div>
                   </div>
                 </div>

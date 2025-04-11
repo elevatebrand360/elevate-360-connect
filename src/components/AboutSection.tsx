@@ -5,27 +5,27 @@ import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 const teamMembers = [
   {
     id: 1,
-    name: 'Team Member 1',
+    name: 'Anas Lari',
     role: 'Founder & CEO',
-    initials: 'TM',
+    initials: 'AL',
   },
   {
     id: 2,
-    name: 'Team Member 2',
-    role: 'Creative Director',
-    initials: 'TM',
+    name: 'Piyush Singh',
+    role: 'Founder & CEO',
+    initials: 'PS',
   },
   {
     id: 3,
-    name: 'Team Member 3',
-    role: 'Marketing Strategist',
-    initials: 'TM',
+    name: 'Shifa Parveen',
+    role: 'Founder & CEO',
+    initials: 'SP',
   },
   {
     id: 4,
-    name: 'Team Member 4',
-    role: 'Lead Developer',
-    initials: 'TM',
+    name: 'Riya Shaw',
+    role: 'Founder & CEO',
+    initials: 'RS',
   },
 ];
 
@@ -78,7 +78,6 @@ const AboutSection = () => {
                   <h3 className="font-semibold text-lg text-brand-navy">{member.name}</h3>
                   <p className="text-gray-600">{member.role}</p>
                   <p className="text-sm mt-2 text-gray-500">
-                    (Add team member photo and bio here)
                   </p>
                 </div>
               </div>
