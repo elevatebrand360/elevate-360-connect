@@ -1,5 +1,4 @@
-
-import { Instagram, Twitter, Facebook, Linkedin, Send } from 'lucide-react';
+import { Instagram, Facebook, Linkedin, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 
@@ -22,21 +21,32 @@ const Footer = () => {
               Your 360° marketing partner. We help brands make powerful connections in the digital world.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-300 hover:text-brand-orange transition-colors">
+              <a 
+                href="https://www.instagram.com/elevatebrand360/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-brand-orange transition-colors p-2 rounded-full hover:bg-white/10"
+                aria-label="Follow us on Instagram"
+              >
                 <Instagram className="h-5 w-5" />
-                <span className="sr-only">Instagram</span>
               </a>
-              <a href="#" className="text-gray-300 hover:text-brand-orange transition-colors">
-                <Twitter className="h-5 w-5" />
-                <span className="sr-only">Twitter</span>
-              </a>
-              <a href="#" className="text-gray-300 hover:text-brand-orange transition-colors">
+              <a 
+                href="https://www.facebook.com/profile.php?id=61575140848082" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-brand-orange transition-colors p-2 rounded-full hover:bg-white/10"
+                aria-label="Follow us on Facebook"
+              >
                 <Facebook className="h-5 w-5" />
-                <span className="sr-only">Facebook</span>
               </a>
-              <a href="#" className="text-gray-300 hover:text-brand-orange transition-colors">
+              <a 
+                href="https://www.linkedin.com/company/elevatebrand360/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-brand-orange transition-colors p-2 rounded-full hover:bg-white/10"
+                aria-label="Follow us on LinkedIn"
+              >
                 <Linkedin className="h-5 w-5" />
-                <span className="sr-only">LinkedIn</span>
               </a>
             </div>
           </div>
