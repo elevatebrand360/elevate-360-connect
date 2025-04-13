@@ -10,7 +10,7 @@ const Index = () => {
     <div className="min-h-screen flex flex-col bg-white">
       <Navbar />
       <main className="flex-1">
-        <HeroSection heroImage="images/Hero Image.png" />
+        <HeroSection heroImage="images/hero-image.png" />
         <ServicesSection />
         <AboutSection />
         <ContactForm />
