@@ -1,8 +1,11 @@
-
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-const HeroSection = () => {
+interface HeroSectionProps {
+  heroImage?: string;
+}
+
+const HeroSection = ({ heroImage = "/images/your-hero-image.jpg" }: HeroSectionProps) => {
   return (
     <section className="w-full py-16 md:py-24 lg:py-32 bg-white overflow-hidden">
       <div className="container px-4 md:px-6">
@@ -29,12 +32,20 @@ const HeroSection = () => {
           </div>
           <div className="relative lg:ml-auto animate-fade-in">
             <div className="relative h-[350px] md:h-[450px] rounded-lg overflow-hidden bg-gradient-to-br from-brand-navy/5 to-brand-orange/5 border border-gray-200">
-              <div className="absolute inset-0 flex items-center justify-center text-gray-400">
-                <div className="text-center p-6">
-                  <p className="text-brand-navy">Hero Image</p>
-                  <p className="text-sm">(Add your creative showcase image here)</p>
+              {heroImage ? (
+                <img
+                  src={heroImage}
+                  alt="Hero Image"
+                  className="w-full h-full object-cover"
+                />
+              ) : (
+                <div className="absolute inset-0 flex items-center justify-center text-gray-400">
+                  <div className="text-center p-6">
+                    <p className="text-brand-navy">Hero Image</p>
+                    <p className="text-sm">(Add your creative showcase image here)</p>
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
             <div className="absolute -bottom-6 -left-6 h-24 w-24 rounded-full bg-brand-orange/20 blur-xl"></div>
             <div className="absolute -top-6 -right-6 h-24 w-24 rounded-full bg-brand-navy/20 blur-xl"></div>

@@ -1,4 +1,3 @@
-
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import ServicesSection from '@/components/ServicesSection';
@@ -11,7 +10,7 @@ const Index = () => {
     <div className="min-h-screen flex flex-col bg-white">
       <Navbar />
       <main className="flex-1">
-        <HeroSection />
+        <HeroSection heroImage="/images/Hero Image.png" />
         <ServicesSection />
         <AboutSection />
         <ContactForm />
