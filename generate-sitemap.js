@@ -1,5 +1,6 @@
-const { SitemapStream, streamToPromise } = require('sitemap');
-const { createWriteStream } = require('fs');
+// generate-sitemap.js
+import { SitemapStream, streamToPromise } from 'sitemap';
+import { createWriteStream } from 'fs';
 
 const links = [
   { url: '/', changefreq: 'weekly', priority: 1.0 },
@@ -13,8 +14,11 @@ const links = [
 ];
 
 const sitemap = new SitemapStream({ hostname: 'https://elevatebrand360.com' });
-streamToPromise(sitemap).then(data => {
-  createWriteStream('./public/sitemap.xml').end(data);
+const writeStream = createWriteStream('./public/sitemap.xml');
+
+streamToPromise(sitemap).then(sm => {
+  writeStream.end(sm);
 });
+
 links.forEach(link => sitemap.write(link));
 sitemap.end();
