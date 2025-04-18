@@ -74,7 +74,7 @@ const ServicesSection = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section id="services" className="py-16 md:py-24 bg-gray-50">
+    <section id="services" className="py-16 md:py-24 relative perspective-1000">
       <div className="container px-4 md:px-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-brand-navy mb-4">Services We Offer</h2>
@@ -89,20 +89,38 @@ const ServicesSection = () => {
               key={service.id}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
-              className={`p-6 rounded-xl transition-all duration-200 ${
-                hoveredIndex === index 
-                ? 'bg-white shadow-lg border-t-4 border-brand-orange' 
-                : 'bg-white/50 hover:bg-white hover:shadow-md'
-              }`}
+              className={`
+                p-6 rounded-xl 
+                backdrop-blur-lg 
+                transform-gpu
+                hover:transform-gpu
+                hover:-translate-y-2
+                hover:rotate-2
+                ${hoveredIndex === index 
+                  ? 'bg-white/80 shadow-xl border-t-4 border-brand-orange translate-z-12' 
+                  : 'bg-white/40 hover:bg-white/60 hover:shadow-2xl'
+                }
+                transition-all duration-300 ease-out
+                preserve-3d
+              `}
+              style={{
+                transformStyle: 'preserve-3d',
+                perspective: '1000px',
+                backfaceVisibility: 'hidden'
+              }}
             >
-              <div className="flex items-center gap-3 mb-4">
-                <div className={`p-2 rounded-lg ${hoveredIndex === index ? 'bg-brand-orange/10 text-brand-orange' : 'bg-gray-100 text-gray-600'}`}>
+              <div className="flex items-center gap-3 mb-4 transform-gpu translate-z-20">
+                <div className={`p-2 rounded-lg transform-gpu hover:scale-110 transition-transform ${
+                  hoveredIndex === index 
+                  ? 'bg-brand-orange/10 text-brand-orange shadow-lg' 
+                  : 'bg-white/50 text-gray-600'
+                }`}>
                   {service.icon}
                 </div>
                 <h3 className="font-semibold text-brand-navy">{service.title}</h3>
               </div>
-              <p className="text-gray-600 text-sm mb-4">{service.description}</p>
-              <ul className="space-y-2">
+              <p className="text-gray-600 text-sm mb-4 transform-gpu translate-z-10">{service.description}</p>
+              <ul className="space-y-2 transform-gpu translate-z-10">
                 {service.items.map((item, i) => (
                   <li key={i} className="text-sm flex items-center gap-2 text-gray-600">
                     <ArrowRight className="h-4 w-4 text-brand-orange" />

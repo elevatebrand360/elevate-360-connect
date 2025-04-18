@@ -40,11 +40,15 @@ const HeroSection = ({ heroImage = "/images/hero-marketing.jpg" }) => {
           </div>
 
           <div className="relative lg:ml-auto order-first lg:order-last">
-            <div className="relative h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative aspect-[16/9] w-full max-w-[800px] mx-auto rounded-2xl overflow-hidden shadow-2xl">
               <img
                 src={heroImage}
                 alt="Digital Marketing Excellence"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-center"
+                style={{
+                  objectPosition: '50% 50%',
+                  maxHeight: '600px'
+                }}
               />
             </div>
           </div>
